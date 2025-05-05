@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit - The heart of the internet</title>
+    <link rel="icon" type="image/x-icon" href="images/reddit-icon.svg">    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar da página -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="images/reddit-logo.png" alt="Logo do Reddit" width="100" id="reddit-logo-navbar">
+            </div>
+            <div class="navbar-search-bar">
+                <div class="navbar-search-container">
+                    <img src="images/search.svg" alt="search" class="svg">
+                </div>
+                <div class="navbar-search-container">
+                    <input type="text" placeholder="Buscar no Reddit">
+                </div>
+                <div class="navbar-search-container">
+
+                </div>
+            </div>
+            <div class="navbar-buttons">
+                <div class="navbar-traducao">
+                    <button class="navbar-button">
+                        <img src="images/translate_symbol.svg" alt="Translation symbol" class="svg">
+                    </button>
+                </div>
+                <div>
+                    <button class="navbar-button" id="baixar-app">
+                        <img src="images/download.svg" alt="download symbol" class="svg">
+                        <span>Baixar o App</span>
+                    </button>
+                </div>
+                <div>
+                    <button class="navbar-button" id="singin" id="singin">Entrar</button>
+                </div>
+                <div>
+                    <button class="navbar-button" id="more-options">
+                        <img src="images/more.svg" alt="..." class="svg">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- conteúdo principal da página -->
+    <div class="main-container">
+        <aside class="sidebar-esquerda">
+            <!-- Botão que futuramente vai abrir/fechar a sidebar -->
+            <button class="toggle-sidebar-button" id="menu-sanduiche">
+                <img src="images/menu.svg" alt="menu sanduiche">
+            </button>
+        
+            <div class="sidebar-conteudo">
+                <div id="sidebar-esquerda-inicial">
+                    <button class="navbar-button" id="sidebar">
+                        <img src="images/home.svg" alt="home page">
+                        Página inicial
+                    </button>
+                    <button class="navbar-button" id="sidebar">
+                        <img src="images/popular.svg" alt="popular">
+                        Popular
+                    </button>
+                </div>
+                <div id="sidebar-esquerda-assuntos">
+                    <button id="space-between">
+                        <span>
+                            ASSUNTOS
+                        </span>
+                        <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
+                    </button>
+                </div>
+                <div id="sidebar-esquerda-recursos">
+                    <button id="space-between">
+                        <span>
+                            RECURSOS
+                        </span>
+                        <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
+                    </button>
+                </div>
+            </div>
+        </aside>
+        
+        <main class="feed">
+            <div id="type-of-visualization-feed">
+                <button class="navbar-button">
+                    <img src="images/type-of-visualization.svg" alt="visualization" class="svg">
+                    <img src="images/arrow_dropdown.svg" alt="dropdown" class="svg">
+                </button>
+            </div>
+            <div class="post">
+                <div class="post-top">
+                  <div class="post-comunidade-info">
+                    <img src="images/circle.svg" alt="Comunidade" class="post-comunidade-foto">
+                    <div class="post-comunidade-detalhes">
+                      <span class="post-comunidade-nome">r/Exemplo</span>
+                      <span class="post-tempo">• há 5 horas</span>
+                    </div>
+                  </div>
+                  <div class="post-acoes">
+                    <button class="botao-unir-se">Unir-se</button>
+                    <button class="botao-mais">
+                      <img src="images/more.svg" alt="Mais opções" class="svg">
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="post-conteudo">
+                  <h2 class="post-titulo">Título do post</h2>
+                  <p>Conteúdo principal do post. Pode ser uma imagem, link, ou só texto mesmo.</p>
+                </div>
+              
+                <div class="post-interacoes">
+                  <div class="post-votos">
+                    <button class="post-interacoes-button"><img src="images/upvote.svg" alt="▲" class="svg"></button>
+                    <span>1234</span>
+                    <button class="post-interacoes-button"><img src="images/downvote.svg" alt="▼" class="svg"></button>
+                  </div>
+                    <button class="post-interacoes-button">
+                        <img src="images/comments.svg" alt="Comentários" class="svg">
+                        <span>234 Comentários</span>
+                    </button>
+                    <button class="post-interacoes-button">
+                        <img src="images/award.svg" alt="Premios" class="svg">
+                        <span>3 Prêmios</span>
+                    </button>
+                    <button class="post-interacoes-button">
+                        <img src="images/share.svg" alt="Compartilhar" width="24">
+                        <span>Compartilhar</span>
+                    </button>
+                </div>
+              </div>           
+              
+              <div class="post">
+                <div class="post-top">
+                  <div class="post-comunidade-info">
+                    <img src="images/circle.svg" alt="Comunidade" class="post-comunidade-foto">
+                    <div class="post-comunidade-detalhes">
+                      <span class="post-comunidade-nome">r/Exemplo</span>
+                      <span class="post-tempo">• há 5 horas</span>
+                    </div>
+                  </div>
+                  <div class="post-acoes">
+                    <button class="botao-unir-se">Unir-se</button>
+                    <button class="botao-mais">
+                      <img src="images/more.svg" alt="Mais opções" class="svg">
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="post-conteudo">
+                  <h2 class="post-titulo">Título do post</h2>
+                  <p>Conteúdo principal do post. Pode ser uma imagem, link, ou só texto mesmo.</p>
+                </div>
+              
+                <div class="post-interacoes">
+                  <div class="post-votos">
+                    <button class="post-interacoes-button"><img src="images/upvote.svg" alt="▲" class="svg"></button>
+                    <span>1234</span>
+                    <button class="post-interacoes-button"><img src="images/downvote.svg" alt="▼" class="svg"></button>
+                  </div>
+                    <button class="post-interacoes-button">
+                        <img src="images/comments.svg" alt="Comentários" class="svg">
+                        <span>234 Comentários</span>
+                    </button>
+                    <button class="post-interacoes-button">
+                        <img src="images/award.svg" alt="Premios" class="svg">
+                        <span>3 Prêmios</span>
+                    </button>
+                    <button class="post-interacoes-button">
+                        <img src="images/share.svg" alt="Compartilhar" width="24">
+                        <span>Compartilhar</span>
+                    </button>
+                </div>
+              </div>
+
+              <div class="post">
+                <div class="post-top">
+                  <div class="post-comunidade-info">
+                    <img src="images/circle.svg" alt="Comunidade" class="post-comunidade-foto">
+                    <div class="post-comunidade-detalhes">
+                      <span class="post-comunidade-nome">r/Exemplo</span>
+                      <span class="post-tempo">• há 5 horas</span>
+                    </div>
+                  </div>
+                  <div class="post-acoes">
+                    <button class="botao-unir-se">Unir-se</button>
+                    <button class="botao-mais">
+                      <img src="images/more.svg" alt="Mais opções" class="svg">
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="post-conteudo">
+                  <h2 class="post-titulo">Título do post</h2>
+                  <p>Conteúdo principal do post. Pode ser uma imagem, link, ou só texto mesmo.</p>
+                </div>
+              
+                <div class="post-interacoes">
+                  <div class="post-votos">
+                    <button class="post-interacoes-button"><img src="images/upvote.svg" alt="▲" class="svg"></button>
+                    <span>1234</span>
+                    <button class="post-interacoes-button"><img src="images/downvote.svg" alt="▼" class="svg"></button>
+                  </div>
+                    <button class="post-interacoes-button">
+                        <img src="images/comments.svg" alt="Comentários" class="svg">
+                        <span>234 Comentários</span>
+                    </button>
+                    <button class="post-interacoes-button">
+                        <img src="images/award.svg" alt="Premios" class="svg">
+                        <span>3 Prêmios</span>
+                    </button>
+                    <button class="post-interacoes-button">
+                        <img src="images/share.svg" alt="Compartilhar" width="24">
+                        <span>Compartilhar</span>
+                    </button>
+                </div>
+              </div>
+
+              <div class="post">
+                <div class="post-top">
+                  <div class="post-comunidade-info">
+                    <img src="images/circle.svg" alt="Comunidade" class="post-comunidade-foto">
+                    <div class="post-comunidade-detalhes">
+                      <span class="post-comunidade-nome">r/Exemplo</span>
+                      <span class="post-tempo">• há 5 horas</span>
+                    </div>
+                  </div>
+                  <div class="post-acoes">
+                    <button class="botao-unir-se">Unir-se</button>
+                    <button class="botao-mais">
+                      <img src="images/more.svg" alt="Mais opções" class="svg">
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="post-conteudo">
+                  <h2 class="post-titulo">Título do post</h2>
+                  <p>Conteúdo principal do post. Pode ser uma imagem, link, ou só texto mesmo.</p>
+                </div>
+              
+                <div class="post-interacoes">
+                  <div class="post-votos">
+                    <button class="post-interacoes-button"><img src="images/upvote.svg" alt="▲" class="svg"></button>
+                    <span>1234</span>
+                    <button class="post-interacoes-button"><img src="images/downvote.svg" alt="▼" class="svg"></button>
+                  </div>
+                    <button class="post-interacoes-button">
+                        <img src="images/comments.svg" alt="Comentários" class="svg">
+                        <span>234 Comentários</span>
+                    </button>
+                    <button class="post-interacoes-button">
+                        <img src="images/award.svg" alt="Premios" class="svg">
+                        <span>3 Prêmios</span>
+                    </button>
+                    <button class="post-interacoes-button">
+                        <img src="images/share.svg" alt="Compartilhar" width="24">
+                        <span>Compartilhar</span>
+                    </button>
+                </div>
+              </div>
+
+              <div class="post">
+                <div class="post-top">
+                  <div class="post-comunidade-info">
+                    <img src="images/circle.svg" alt="Comunidade" class="post-comunidade-foto">
+                    <div class="post-comunidade-detalhes">
+                      <span class="post-comunidade-nome">r/Exemplo</span>
+                      <span class="post-tempo">• há 5 horas</span>
+                    </div>
+                  </div>
+                  <div class="post-acoes">
+                    <button class="botao-unir-se">Unir-se</button>
+                    <button class="botao-mais">
+                      <img src="images/more.svg" alt="Mais opções" class="svg">
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="post-conteudo">
+                  <h2 class="post-titulo">Título do post</h2>
+                  <p>Conteúdo principal do post. Pode ser uma imagem, link, ou só texto mesmo.</p>
+                </div>
+              
+                <div class="post-interacoes">
+                  <div class="post-votos">
+                    <button class="post-interacoes-button"><img src="images/upvote.svg" alt="▲" class="svg"></button>
+                    <span>1234</span>
+                    <button class="post-interacoes-button"><img src="images/downvote.svg" alt="▼" class="svg"></button>
+                  </div>
+                    <button class="post-interacoes-button">
+                        <img src="images/comments.svg" alt="Comentários" class="svg">
+                        <span>234 Comentários</span>
+                    </button>
+                    <button class="post-interacoes-button">
+                        <img src="images/award.svg" alt="Premios" class="svg">
+                        <span>3 Prêmios</span>
+                    </button>
+                    <button class="post-interacoes-button">
+                        <img src="images/share.svg" alt="Compartilhar" width="24">
+                        <span>Compartilhar</span>
+                    </button>
+                </div>
+              </div>
+        </main>
+        <aside class="sidebar-comunidades-populares">
+            <div class="sidebar-direita">
+                <span id="title-comunidades-populares">
+                    COMUNIDADES POPULARES
+                </span>
+
+                <div class="comunidades-populares">
+                    <img src="images/circle.svg" alt="circle">
+                    <span>
+                        r/NoStupidQuestions
+                    </span>
+                </div>
+                <div class="comunidades-populares">
+                    <img src="images/circle.svg" alt="circle">
+                    <span>
+                        r/Minecraft
+                    </span>
+                </div>
+                <div class="comunidades-populares">
+                    <img src="images/circle.svg" alt="circle">
+                    <span>
+                        r/Fitness
+                    </span>
+                </div>
+                <button id="sidebar-direita-button" >Ver mais</button>
+            </div>
+            <footer class="footer">
+                <div class="footer-links">
+                    <a href="#">Regras do Reddit</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Contrato de Usuário</a>
+                    <a href="#">Reddit, Inc © 2025. Todos os direitos reservados.</a>
+                </div>
+            </footer>
+        </aside>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,481 @@
+
+   :root {
+    --cor-primaria: #0079d3;
+    --cor-secundaria: #ff4500;
+  
+    --fundo-principal: #1a1a1b;
+    --fundo-card: #272729;
+    --fundo-hover: #3a3b3c;
+  
+    --texto-principal: #d7dadc;
+    --texto-secundario: #818384;
+  
+    --borda-cor: #343536;
+    --sombra-leve: rgba(255, 255, 255, 0.05);
+  
+    --branco: #ffffff;
+    --preto: #000000;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+  }
+
+  .svg{
+    height: 24px;
+    width: 24px;
+  }
+
+  /* Navbar antes */
+  /* .navbar { 
+    background-color: var(--fundo-principal);
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--borda-cor);
+    position: relative;
+  } */
+
+  /* Navbar GPT */
+  .navbar {
+    background-color: var(--fundo-principal);
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--borda-cor);
+    position: fixed;       /* FIXA no topo da tela */
+    top: 0;
+    left: 0;
+    width: 100%;           /* Garante que ocupe a largura total */
+    z-index: 1000;         /* Fica sobre o conteúdo */
+  }
+  
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-logo img {
+    width: 100px;
+  }
+
+  .navbar-search-bar{
+    display: flex;
+    align-items: center;
+    background-color: var(--fundo-hover);
+    border-radius: 999px;
+    padding: 12px 24px;
+    gap: 8px;
+  }
+
+  .navbar-search-container{
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--texto-principal);
+    width: 300px;
+  }
+
+  .navbar-buttons{
+    display: flex;
+  }
+  
+  .navbar-search-bar input::placeholder {
+    color: var(--texto-secundario);
+  }
+  
+  .navbar-traducao img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .navbar-button{
+    height: 100%;
+    background-color: var(--fundo-principal);
+    color: var(--branco);
+    border: none;
+    padding: 8px 16px;
+    margin-left: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;          /* Adiciona flexbox no botão */
+    align-items: center;    /* Centraliza imagem e texto verticalmente */
+    gap: 8px;               /* Espaço entre a imagem e o texto */
+  }
+  
+  .navbar-button:hover {
+    background-color: var(--fundo-hover);
+  }
+
+  #reddit-logo-navbar, #search-button{
+    cursor: pointer;
+  }
+
+  #sidebar{
+    margin-left: 0px;
+    padding-left: 0;
+  }
+
+  #baixar-app{
+    background-color: var(--fundo-card);
+  }
+
+  #singin{
+    background-color: var(--cor-secundaria);
+  }
+  
+  .main-container {
+    display: flex;
+    padding: 0 100px 0 20px;
+    gap: 20px;
+    margin-left: 200px;
+    padding-top: 84px;
+  }
+  
+  /* .sidebar-esquerda {
+    position: relative;
+    width: 200px;
+    height: 100vh; Deixa o tamanho da sidebar até o fim da tela
+    background-color: var(--fundo-principal);
+    height: 100vh;
+    border-right: 1px solid var(--borda-cor);
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  } */
+
+  .sidebar-esquerda {
+    position: fixed;       /* FIXA na lateral esquerda */
+    top: 0;
+    left: 20px;
+    width: 200px;
+    height: 100vh;
+    background-color: var(--fundo-principal);
+    border-right: 1px solid var(--borda-cor);
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;     /* Compensa a altura da navbar, se necessário */
+    z-index: 999;
+    padding-top: 84px;
+  }
+  
+  
+  .sidebar-esquerda button {
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+    border: none;
+    padding: 10px;
+    width: 85%;
+    text-align: left;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  #space-between{
+    justify-content: space-between;
+  }
+  
+  .sidebar-esquerda button:hover {
+    background-color: var(--fundo-hover);
+  }
+
+  #menu-sanduiche{
+    position: absolute;
+    top: 10px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--borda-cor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  #sidebar-esquerda-inicial, #sidebar-esquerda-assuntos{
+    border-bottom: 1px solid var(--borda-cor);
+    padding-bottom: 10px; /* Adiciona espaço interno antes da borda */
+    margin-bottom: 10px;  /* Adiciona espaço depois da borda para separar do próximo conteúdo */
+  }
+
+  .feed {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 10px;
+    margin-left: 60px;
+    margin-right: 300px;
+  }
+
+  #type-of-visualization-feed{
+    border-bottom: 1px solid var(--borda-cor);
+  }
+  
+  .sidebar-direita {
+    width: 300px;
+    background-color: var(--preto);
+    padding: 15px;
+    border-radius: 8px;
+    height: fit-content;
+    margin-top: 20px;
+  }
+
+  .sidebar-direita h5 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--texto-principal);
+  }
+  
+  .comunidades-populares {
+    padding: 8px;
+    background-color: var(--preto);
+    border-radius: 5px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: flex;
+  }
+  
+  .comunidades-populares:hover {
+    background-color: var(--borda-cor);
+  }
+  
+  .sidebar-direita button {
+    background-color: var(--preto);
+    color: var(--branco);
+    border: none;
+    padding: 8px 4px;
+    width: 30%;
+    margin-top: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .sidebar-direita button:hover {
+    background-color: var(--borda-cor);
+  }
+
+  #title-comunidades-populares{
+    font-size: 12px;
+  }
+
+  .sidebar-comunidades-populares{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    top: 80px;
+    right: 60px;
+    width: 300px;
+    justify-content: space-between;
+    height: calc(100vh - 75px);
+    position: fixed;
+    overflow-y: auto;
+  }
+  
+  .footer {
+    width: 300px;
+    background-color: var(--preto);
+    height: fit-content;
+    background-color: var(--fundo-principal);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    /* justify-content: space-around; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
+}
+
+.footer-links a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    color: var(--texto-secundario);
+    font-size: 12px;
+    text-align: center;
+}
+
+  .post {
+    background-color: var(--fundo-principal);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .post:hover{
+    background-color: var(--borda-cor);
+  }
+  
+  .post-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .post-comunidade-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .post-comunidade-foto {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  
+  .post-comunidade-detalhes {
+    display: flex;
+    flex-direction: auto;
+    align-items: center;
+  }
+
+  .post-comunidade-detalhes span{
+    margin: 1px;
+  }
+  
+  .post-comunidade-nome {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .post-tempo {
+    font-size: 12px;
+    color: var(--texto-secundario);
+  }
+  
+  .post-acoes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .botao-unir-se {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .botao-unir-se:hover {
+    background-color: #005999; /* um tom mais escuro */
+  }
+  
+  .botao-mais {
+    border: none;
+    height: 100%;
+    background-color: var(--fundo-principal);
+    color: var(--branco);
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;          /* Adiciona flexbox no botão */
+    align-items: center;    /* Centraliza imagem e texto verticalmente */
+  }
+
+  .botao-mais:hover{
+    background-color: var(--fundo-hover);
+  }
+  
+  .post-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .post-titulo {
+    font-size: 18px;
+  }
+  
+  .post-texto {
+    font-size: 14px;
+    color: var(--texto-principal);
+  }
+  
+  .post-interacoes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    color: var(--texto-secundario);
+    gap: 10px;
+  }
+  
+  .post-interacoes > div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .post-interacoes-button{
+    height: 100%;
+    background-color: var(--borda-cor);
+    color: var(--branco);
+    border: none;
+    padding: 4px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;          /* Adiciona flexbox no botão */
+    align-items: center;    /* Centraliza imagem e texto verticalmente */
+    gap: 8px;               /* Espaço entre a imagem e o texto */
+
+  }
+
+  .post-interacoes-button:hover{
+    background-color: var(--fundo-hover);
+  }
+
+  .post-interacoes-button span{
+    color: var(--texto-principal);
+  }
+ 
+  .post-votos {
+    background-color: var(--borda-cor);
+    border-radius: 999px;
+  }
+  
+
+  
