@@ -170,9 +170,44 @@
     padding-top: 60px;     /* Compensa a altura da navbar, se necessário */
     z-index: 999;
     padding-top: 84px;
+    overflow: hidden;
   }
+
+  .sidebar-escondida {
+    transform: translateX(-180px);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: hidden;
   
-  
+  }
+
+
+  .conteudo-scrollavel {
+  overflow-y: auto;
+  height: calc(100vh - 84px);
+  }
+
+  .conteudo-scrollavel::-webkit-scrollbar {
+    width: 8px; 
+  }
+
+  .conteudo-scrollavel::-webkit-scrollbar-track {
+    background: var(--fundo-principal);
+    border-radius: 4px;
+  }
+
+
+  .conteudo-scrollavel::-webkit-scrollbar-thumb {
+    background-color: var(--borda-cor);
+    border-radius: 4px;
+    border: 2px solid var(--fundo-principal);
+  }
+
+
+  .conteudo-scrollavel::-webkit-scrollbar-thumb:hover {
+    background-color: var(--texto-principal);
+  }
+
+
   .sidebar-esquerda button {
     background-color: var(--fundo-principal);
     color: var(--texto-principal);
@@ -197,10 +232,9 @@
   }
 
   #menu-sanduiche{
-    position: absolute;
-    top: 10px;
-    left: 100%;
-    transform: translateX(-50%);
+    position: fixed;
+    top: 94px;
+    left: 200px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -211,10 +245,26 @@
     cursor: pointer;
   }
 
+    #menu-sanduiche-escondido{
+    position: fixed;
+    top: 94px;
+    left: 180px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--borda-cor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10001;
+  }
+
   #sidebar-esquerda-inicial, #sidebar-esquerda-assuntos{
     border-bottom: 1px solid var(--borda-cor);
     padding-bottom: 10px; /* Adiciona espaço interno antes da borda */
     margin-bottom: 10px;  /* Adiciona espaço depois da borda para separar do próximo conteúdo */
+    margin-top: 10px;
   }
 
   .feed {
