@@ -1,0 +1,151 @@
+    .navbar-button{
+        height: 100%;
+        background-color: var(--fundo-principal);
+        color: var(--branco);
+        border: none;
+        padding: 8px 16px;
+        margin-left: 8px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;          /* Adiciona flexbox no botão */
+        align-items: center;    /* Centraliza imagem e texto verticalmente */
+        gap: 8px;               /* Espaço entre a imagem e o texto */
+    }
+
+    .navbar-button:hover {
+    background-color: var(--fundo-hover);
+    }
+
+    #singin-button{
+        background-color: var(--cor-secundaria);
+    }
+
+    #reddit-logo-navbar, #search-button{
+        cursor: pointer;
+    }
+
+    .botao-unir-se-post {
+        background-color: var(--cor-primaria);
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    
+    .botao-unir-se-post:hover {
+        background-color: #005999; /* um tom mais escuro */
+    }
+    
+    .botao-mais-post {
+        border: none;
+        height: 100%;
+        background-color: var(--fundo-principal);
+        color: var(--branco);
+        padding: 6px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;          /* Adiciona flexbox no botão */
+        align-items: center;    /* Centraliza imagem e texto verticalmente */
+    }
+
+    .botao-mais-post:hover{
+        background-color: var(--fundo-hover);
+    }
+
+    .post-interacoes-button{
+        height: 100%;
+        background-color: var(--borda-cor);
+        color: var(--branco);
+        border: none;
+        padding: 4px 8px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;          /* Adiciona flexbox no botão */
+        align-items: center;    /* Centraliza imagem e texto verticalmente */
+        gap: 8px;               /* Espaço entre a imagem e o texto */
+    }
+
+    .post-interacoes-button:hover{
+        background-color: var(--fundo-hover);
+    }
+
+    .post-interacoes-button span{
+        color: var(--texto-principal);
+    }
+
+    .sidebar-esquerda-button { /*TIRAR ISSO*/
+        background-color: var(--fundo-principal);
+        color: var(--texto-principal);
+        border: none;
+        padding: 10px;
+        width: 85%;
+        text-align: left;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .sidebar-esquerda-button:hover {
+        background-color: var(--fundo-hover);
+    }
+
+    .sidebar-direita-button {
+        background-color: var(--preto);
+        color: var(--branco);
+        border: none;
+        padding: 8px 4px;
+        width: 30%;
+        margin-top: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+  
+    .sidebar-direita-button:hover {
+        background-color: var(--borda-cor);
+    }
+
+    /* .menu-sanduiche{
+        background-color: var(--fundo-principal);
+        position: fixed;
+        top: 94px;
+        left: 200px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid var(--borda-cor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    } */
+
+.menu-sanduiche {
+    position: absolute;
+    top: 100px;
+    left: 90%;
+    /* transform: translateX(50%); */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--fundo-principal);
+    border: 1px solid var(--borda-cor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+
+    .menu-sanduiche:hover{
+        background-color: var(--fundo-hover);
+    }

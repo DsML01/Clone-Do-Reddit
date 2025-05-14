@@ -28,3 +28,15 @@ function esconderSideBar(sidebarId, menuId) {
     else if(menu.id == "menu-sanduiche-escondido") menu.id = "menu-sanduiche";
 
 }   
+
+function esconderSideBar2(sidebarID) {
+    console.log("FUNCAO CHAMADA")
+    const sidebar = document.getElementById(sidebarID);
+    // let menu = document.getElementsByClassName(menuId);
+    if (!sidebar) {
+        console.warn('Sidebar não encontrada.');
+        return;
+    }
+
+    sidebar.classList.toggle("sidebar-escondida");
+}   

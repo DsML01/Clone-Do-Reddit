@@ -1,0 +1,84 @@
+  .sidebar-direita {
+    width: 300px;
+    background-color: var(--preto);
+    padding: 15px;
+    border-radius: 8px;
+    height: fit-content;
+    margin-top: 20px;
+  }
+
+  .sidebar-direita h5 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--texto-principal);
+  }
+  
+  .comunidades-populares {
+    padding: 8px;
+    background-color: var(--preto);
+    border-radius: 5px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: flex;
+  }
+  
+  .comunidades-populares:hover {
+    background-color: var(--borda-cor);
+  }
+
+  #title-comunidades-populares{
+    font-size: 12px;
+  }
+
+  .sidebar-comunidades-populares{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    top: 80px;
+    right: 60px;
+    width: 300px;
+    justify-content: space-between;
+    height: calc(100vh - 75px);
+    position: fixed;
+    overflow-y: auto;
+  }
+  
+  .footer {
+    width: 300px;
+    background-color: var(--preto);
+    height: fit-content;
+    background-color: var(--fundo-principal);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    /* justify-content: space-around; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
+}
+
+.footer-links a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    color: var(--texto-secundario);
+    font-size: 12px;
+    text-align: center;
+}
