@@ -10,10 +10,11 @@
     flex-direction: column;
     padding-top: 60px;     /* Compensa a altura da navbar, se necessário */
     padding-top: 84px;
+    transition: transform 0.3s ease-in-out;
   }
 
   .sidebar-escondida {
-    transform: translateX(-180px);
+    transform: translateX(-185px);
     transition: transform 0.3s ease-in-out;
   }
 
