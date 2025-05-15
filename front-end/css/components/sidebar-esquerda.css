@@ -8,16 +8,9 @@
     border-right: 1px solid var(--borda-cor);
     display: flex;
     flex-direction: column;
-    padding-top: 60px;     /* Compensa a altura da navbar, se necessário */
     padding-top: 84px;
     transition: transform 0.3s ease-in-out;
   }
-
-  .sidebar-escondida {
-    transform: translateX(-185px);
-    transition: transform 0.3s ease-in-out;
-  }
-
 
   .conteudo-scrollavel {
   overflow-y: auto;
@@ -45,23 +38,21 @@
     background-color: var(--texto-principal);
   }
 
-    #menu-sanduiche-escondido{
-    position: fixed;
-    top: 94px;
-    left: 180px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--borda-cor);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-
   #sidebar-esquerda-inicial, #sidebar-esquerda-assuntos{
     border-bottom: 1px solid var(--borda-cor);
     padding-bottom: 10px; /* Adiciona espaço interno antes da borda */
     margin-bottom: 10px;  /* Adiciona espaço depois da borda para separar do próximo conteúdo */
     margin-top: 10px;
+  }
+
+  .sidebar-escondida {
+    transform: translateX(-185px);
+    transition: transform 0.3s ease-in-out;
+    
+  }
+
+  .sidebar-escondida .conteudo-scrollavel {
+  opacity: 0;
+  pointer-events: none; /* Impede interação */
+  overflow: hidden; /* Remove o scroll */
   }
