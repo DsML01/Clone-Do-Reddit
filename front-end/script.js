@@ -89,20 +89,42 @@ function ver_mais(){
     console.log("CHAMOOOU");
     const sidebar_direita = document.getElementById('sidebar-direita');
     const botao_ver_mais = document.getElementById('ver-mais-sidebar-direita');
-    const subreddit_popular_inicial = subreddit_popular_atual
 
-    for(subreddit_popular_atual; subreddit_popular_atual < subreddit_popular_inicial + 5; subreddit_popular_atual++)
+    if(subreddit_popular_atual >= 14)
     {
-        const div = document.createElement("div");
-        div.className = "comunidades-populares";
-        div.innerHTML = `
-            <img src="images/circle.svg" alt="circle">
-            <span>
-                r/${subreddits[subreddit_popular_atual]}
-            </span>
-        `;
-        sidebar_direita.insertBefore(div, botao_ver_mais);
+        //Tenho que fazer algo para retirar as que já estão lá
+        //ou remover tudo e readicionar as 5 primeiras
+
+        let comunidades_populares = sidebar_direita.querySelectorAll('.comunidades-populares');
+        const pai_comunidades_populares = comunidades_populares[0].parentNode;
+
+        for(i = 5; i < 14; i++)
+        {
+            pai_comunidades_populares.removeChild(comunidades_populares[i]);
+            console.log("CHAMADOOOOOO")
+        }
+
+        subreddit_popular_atual = 5;
+        botao_ver_mais.innerHTML = 'Ver mais';
     }
+    else
+    {
+        for(subreddit_popular_atual; subreddit_popular_atual < 14; subreddit_popular_atual++)
+        {
+            const div = document.createElement("div");
+            div.className = "comunidades-populares";
+            div.innerHTML = `
+                <img src="images/circle.svg" alt="circle">
+                <span>
+                    r/${subreddits[subreddit_popular_atual]}
+                </span>
+            `;
+            sidebar_direita.insertBefore(div, botao_ver_mais);
+            
+            botao_ver_mais.innerHTML = 'Ver menos';
+        }
+    }
+
 }
 
 function hideAndSeeDownloadWindow(){
