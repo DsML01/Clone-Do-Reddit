@@ -1,0 +1,43 @@
+.janela-baixe-o-reddit{
+    position: fixed;
+    background-color: var(--fundo-hover);
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    padding: 70px;
+    text-align: center;
+    opacity: 1;
+}
+
+.janela-baixe-o-reddit h3, p{
+    margin-bottom: 10px;
+}
+
+.img-baixe-o-reddit{
+    /* scale: 40%; Por algum motivo, desse jeito está errado*/
+    width: 150px;
+    height: auto;
+}
+
+#ajustar-play-e-app-store-baixe-reddit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.janela-baixe-o-reddit-escondida{
+    position: fixed;
+    background-color: var(--fundo-hover);
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    padding: 70px;
+    text-align: center;
+    opacity: 0;
+}

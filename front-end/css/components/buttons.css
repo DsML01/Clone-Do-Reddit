@@ -128,24 +128,40 @@
     } */
 
 .menu-sanduiche {
-    position: absolute;
-    top: 100px;
-    left: 90%;
-    /* transform: translateX(50%); */
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--fundo-principal);
-    border: 1px solid var(--borda-cor);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1000;
-}
+        position: absolute;
+        top: 100px;
+        left: 90%;
+        /* transform: translateX(50%); */
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--fundo-principal);
+        border: 1px solid var(--borda-cor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
 
 
 
     .menu-sanduiche:hover{
+        background-color: var(--fundo-hover);
+    }
+
+    #sair-do-download-button{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        border: 1px solid var(--borda-cor);
+        background-color: var(--fundo-principal);
+        display: flex;
+    }
+
+    #sair-do-download-button:hover{
         background-color: var(--fundo-hover);
     }

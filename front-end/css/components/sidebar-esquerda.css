@@ -52,7 +52,7 @@
   }
 
   .sidebar-escondida .conteudo-scrollavel {
-  opacity: 0;
-  pointer-events: none; /* Impede interação */
-  overflow: hidden; /* Remove o scroll */
+    opacity: 0;
+    /*pointer-events: none; /* Impede interação */
+    /*overflow: hidden; /* Remove o scroll */
   }

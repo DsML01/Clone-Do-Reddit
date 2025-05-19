@@ -32,7 +32,7 @@
                   </button>
               </div>
               <div>
-                  <button class="navbar-button" id="baixar-app">
+                  <button class="navbar-button" id="baixar-app" onclick="hideAndSeeDownloadWindow()">
                       <img src="images/download.svg" alt="download symbol" class="svg">
                       <span>Baixar o App</span>
                   </button>
@@ -392,12 +392,12 @@
             </div>
       </main>
       <aside class="sidebar-comunidades-populares">
-          <div class="sidebar-direita">
+          <div class="sidebar-direita" id="sidebar-direita">
               <span id="title-comunidades-populares">
                   COMUNIDADES POPULARES
               </span>
 
-              <div class="comunidades-populares">
+              <!-- <div class="comunidades-populares">
                   <img src="images/circle.svg" alt="circle">
                   <span>
                       r/NoStupidQuestions
@@ -414,9 +414,10 @@
                   <span>
                       r/Fitness
                   </span>
-              </div>
-              <button class="sidebar-direita-button" >Ver mais</button>
-          </div>
+              </div> -->
+              <button class="sidebar-direita-button" id="ver-mais-sidebar-direita" onclick="ver_mais()">Ver mais</button>
+              <button onclick="ver_mais()">teste</button>
+            </div>
           <footer class="footer">
               <div class="footer-links">
                   <a href="#">Regras do Reddit</a>

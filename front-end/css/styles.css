@@ -4,6 +4,7 @@
 @import url('components/post.css');
 @import url('components/sidebar-direita.css');
 @import url('components/sidebar-esquerda.css');
+@import url('components/janelas.css');
    
 :root {
 --cor-primaria: #0079d3;
