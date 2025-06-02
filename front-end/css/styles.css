@@ -5,6 +5,7 @@
 @import url('components/sidebar-direita.css');
 @import url('components/sidebar-esquerda.css');
 @import url('components/janelas.css');
+@import url('components/chat.css');
    
 :root {
 --cor-primaria: #0079d3;
@@ -18,10 +19,12 @@
 --texto-secundario: #818384;
 
 --borda-cor: #343536;
+--borda-cor-2: #444;
 --sombra-leve: rgba(255, 255, 255, 0.05);
 
 --branco: #ffffff;
 --preto: #000000;
+--preto-2: #282828;
 }
   
 * {

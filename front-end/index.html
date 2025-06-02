@@ -25,26 +25,51 @@
 
               </div>
           </div>
-          <div class="navbar-buttons">
-              <div class="navbar-traducao">
+            <div class="navbar-buttons">
+                <div class="navbar-traducao">
+                  <button class="navbar-button" id="bate-papo-button" onclick="hideAndSeeBatePapo()">
+                      <img src="images/bate-papo.svg" alt="Translation symbol" class="svg">
+                  </button>
+                  <div class="bate-papo" id="bate-papo">
+                    <div class="bate-papo-conversas">
+                        <div class="bate-papo-conversas-cabecalho">
+                            <img src="images/reddit-logo.png" alt="reddit-logo">
+                        </div>
+                        <div class="bate-papo-conversas-conversas" id="bate-papo-conversas-conversas">
+                        </div>
+                    </div>
+                    <div class="bate-papo-chat">
+                        <div class="bate-papo-chat-user-info" id="bate-papo-chat-user-info">                         
+                        </div>
+                        <div class="bate-papo-chat-mensagens" id="container-mensagens"></div>
+                        <div class="bate-papo-chat-enviar-mensagem">
+                            <input type="text" placeholder="Digite a sua mensagem...">
+                            <button class="botao-enviar">
+                                <img src="images/send_message.svg" alt="Enviar">
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="navbar-traducao">
                   <button class="navbar-button">
                       <img src="images/translate_symbol.svg" alt="Translation symbol" class="svg">
                   </button>
-              </div>
-              <div>
-                  <button class="navbar-button" id="baixar-app" onclick="hideAndSeeDownloadWindow()">
-                      <img src="images/download.svg" alt="download symbol" class="svg">
-                      <span>Baixar o App</span>
-                  </button>
-              </div>
-              <div>
-                  <button class="navbar-button" id="singin-button">Entrar</button>
-              </div>
-              <div>
-                  <button class="navbar-button" id="more-options">
-                      <img src="images/more.svg" alt="..." class="svg">
-                  </button>
-              </div>
+                </div>
+                <div>
+                    <button class="navbar-button" id="baixar-app" onclick="hideAndSeeDownloadWindow()">
+                        <img src="images/download.svg" alt="download symbol" class="svg">
+                        <span>Baixar o App</span>
+                    </button>
+                </div>
+                <div>
+                    <button class="navbar-button" id="singin-button">Entrar</button>
+                </div>
+                <div>
+                    <button class="navbar-button" id="more-options">
+                        <img src="images/more.svg" alt="..." class="svg">
+                    </button>
+                </div>
           </div>
       </div>
   </header>
@@ -70,42 +95,193 @@
                     </button>
                 </div>
                 <div id="sidebar-esquerda-assuntos">
-                    <button class="sidebar-esquerda-button">
+                    <button class=" dropdown-sidebar-esquerda-button">
                         <span>
                             ASSUNTOS
                         </span>
                         <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
                     </button>
-                    <button class="sidebar-esquerda-button" >
-                        <img src="images/home.svg" alt="home page">
-                        Cultura da internet (virais)
-                        <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
-                    </button>    
-                    <button class="sidebar-esquerda-button" >
-                        <img src="images/home.svg" alt="home page">
-                        Jogos
-                        <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
-                    </button>
-                    <button class="sidebar-esquerda-button" >
-                        <img src="images/home.svg" alt="home page">
-                        Perguntas
-                        <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
-                    </button>
-                    <button class="sidebar-esquerda-button" >
-                        <img src="images/home.svg" alt="home page">
-                        Tecnologia
-                        <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
-                    </button>
-                    <button class="sidebar-esquerda-button" >
-                        <img src="images/home.svg" alt="home page">
-                        Cultura pop
-                        <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
-                    </button>  
-                    <button class="sidebar-esquerda-button" >
-                        <img src="images/home.svg" alt="home page">
-                        Filmes e TV
-                        <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
-                    </button>                                                                                                                            
+                    <div class="dropdown-content">
+                        <button class="dropdown-sidebar-esquerda-button" >
+                            <img src="images/home.svg" alt="home page">
+                            Cultura da internet (virais)
+                            <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
+                        </button>
+                        <div class="dropdown-subcontent">
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Coisas incríveis
+                            </button> 
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Animais e pets
+                            </button>         
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Constrangedor e vergonhoso
+                            </button>                     
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Humor
+                            </button>
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Interesses
+                            </button>     
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Memes
+                            </button> 
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Estranhamente prazeroso
+                            </button>                  
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Reddit Meta
+                            </button>      
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                De aquecer o coração
+                            </button>
+                        </div>
+                        <button class="dropdown-sidebar-esquerda-button" >
+                            <img src="images/home.svg" alt="home page">
+                            Jogos
+                            <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
+                        </button>
+                        <div class="dropdown-subcontent">
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Jogos de ação
+                            </button> 
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Jogos de aventura
+                            </button>         
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                e-Sports
+                            </button>                     
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Consoles e acessórios
+                            </button>
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Notícias e discussões
+                            </button>     
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Jogos mobile
+                            </button> 
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Outros jogos
+                            </button>                  
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Jogos de RPG
+                            </button>      
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Jogos de simulação
+                            </button>
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Esportes e jogos de combate
+                            </button>
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Jogos de estratégia
+                            </button>
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Jogos de tabuleiro
+                            </button>                                                                                    
+                        </div>
+                        <button class="dropdown-sidebar-esquerda-button" >
+                            <img src="images/home.svg" alt="home page">
+                            Perguntas
+                            <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
+                        </button>
+                        <div class="dropdown-subcontent">
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Perguntas
+                            </button> 
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Histórias e confissões
+                            </button>                                                                                        
+                        </div>
+                        <button class="dropdown-sidebar-esquerda-button" >
+                            <img src="images/home.svg" alt="home page">
+                            Tecnologia
+                            <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
+                        </button>
+                        <div class="dropdown-subcontent">
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Impressão 3D
+                            </button> 
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Inteligência artificial
+                            </button>
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Computadores e hardware
+                            </button>                  
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Eletrônicos de consumo
+                            </button>                 
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Programação
+                            </button>                                                                           
+                        </div>
+                        <button class="dropdown-sidebar-esquerda-button" >
+                            <img src="images/home.svg" alt="home page">
+                            Cultura pop
+                            <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
+                        </button>
+                        <div class="dropdown-subcontent">
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Celebridades
+                            </button> 
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Criadores e influenciadores
+                            </button>
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Gerações de nostalgia
+                            </button>                  
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Podcasts
+                            </button>                 
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Streamers
+                            </button>                                                                           
+                        </div>
+                        <button class="dropdown-sidebar-esquerda-button" >
+                            <img src="images/home.svg" alt="home page">
+                            Filmes e TV
+                            <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">
+                        </button>          
+                        <div class="dropdown-subcontent">
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Filmes e séries de ação
+                            </button> 
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Filmes e séries de comédia
+                            </button>
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Filmes e séries antigos
+                            </button>                  
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Reality shows
+                            </button>                 
+                            <button class="subassunto-sidebar-esquerda-button" >
+                                Notícias e discussões sobre lançamentos
+                            </button>                                                                           
+                        </div>
+                        <div class="dropdown-subcontent">
+                            <button class="dropdown-sidebar-esquerda-button" >
+                                Anime
+                            </button> 
+                            <button class="dropdown-sidebar-esquerda-button" >
+                                Artes
+                            </button>
+                            <button class="dropdown-sidebar-esquerda-button" >
+                                Negócios
+                            </button>                  
+                            <button class="dropdown-sidebar-esquerda-button" >
+                                Carreira
+                            </button>                 
+                            <button class="dropdown-sidebar-esquerda-button" >
+                                Música
+                            </button> 
+                            <button class="dropdown-sidebar-esquerda-button" >
+                                Esportes
+                            </button>                                                           
+                        </div>
+                        <button class="ver-mais-sidebar-esquerda" id="ver-mais-sidebar-esquerda-button" onclick="hideAndSeeVerMaisSidebarEsquerda()">
+                            Ver mais
+                        </button>                                                                                                                  
+                    </div>
                 </div>
                 <div id="sidebar-esquerda-recursos">
                     <button class="sidebar-esquerda-button">
@@ -160,8 +336,8 @@
                         <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">                    
                     </button> 
                     <button class="sidebar-esquerda-button" >                    
-                      <img src="images/home.svg" alt="home page">
-                        Assuntos
+                        <img src="images/home.svg" alt="home page">
+                            Assuntos
                         <img src="images/arrow_dropdown.svg" alt="arrow dropdown" class="svg">                    
                     </button>                                                                                                                                                                                        
                 </div>
@@ -169,227 +345,13 @@
           </div>
         </aside>
       
-      <main class="feed">
+      <main class="feed" id="feed">
           <div id="type-of-visualization-feed">
               <button class="navbar-button">
                   <img src="images/type-of-visualization.svg" alt="visualization" class="svg">
                   <img src="images/arrow_dropdown.svg" alt="dropdown" class="svg">
               </button>
           </div>
-          <div class="post">
-              <div class="post-top">
-                <div class="post-comunidade-info">
-                  <img src="images/circle.svg" alt="Comunidade" class="post-comunidade-foto">
-                  <div class="post-comunidade-detalhes">
-                    <span class="post-comunidade-nome">r/Exemplo</span>
-                    <span class="post-tempo">• há 5 horas</span>
-                  </div>
-                </div>
-                <div class="post-acoes">
-                  <button class="botao-unir-se-post">Unir-se</button>
-                  <button class="botao-mais-post">
-                    <img src="images/more.svg" alt="Mais opções" class="svg">
-                  </button>
-                </div>
-              </div>
-            
-              <div class="post-conteudo">
-                <h2 class="post-titulo">Título do post</h2>
-                <p>Conteúdo principal do post. Pode ser uma imagem, link, ou só texto mesmo.</p>
-              </div>
-            
-              <div class="post-interacoes">
-                <div class="post-votos">
-                  <button class="post-interacoes-button"><img src="images/upvote.svg" alt="▲" class="svg"></button>
-                  <span>1234</span>
-                  <button class="post-interacoes-button"><img src="images/downvote.svg" alt="▼" class="svg"></button>
-                </div>
-                  <button class="post-interacoes-button">
-                      <img src="images/comments.svg" alt="Comentários" class="svg">
-                      <span>234 Comentários</span>
-                  </button>
-                  <button class="post-interacoes-button">
-                      <img src="images/award.svg" alt="Premios" class="svg">
-                      <span>3 Prêmios</span>
-                  </button>
-                  <button class="post-interacoes-button">
-                      <img src="images/share.svg" alt="Compartilhar" width="24">
-                      <span>Compartilhar</span>
-                  </button>
-              </div>
-            </div>           
-            
-            <div class="post">
-              <div class="post-top">
-                <div class="post-comunidade-info">
-                  <img src="images/circle.svg" alt="Comunidade" class="post-comunidade-foto">
-                  <div class="post-comunidade-detalhes">
-                    <span class="post-comunidade-nome">r/Exemplo</span>
-                    <span class="post-tempo">• há 5 horas</span>
-                  </div>
-                </div>
-                <div class="post-acoes">
-                  <button class="botao-unir-se-post">Unir-se</button>
-                  <button class="botao-mais-post">
-                    <img src="images/more.svg" alt="Mais opções" class="svg">
-                  </button>
-                </div>
-              </div>
-            
-              <div class="post-conteudo">
-                <h2 class="post-titulo">Título do post</h2>
-                <p>Conteúdo principal do post. Pode ser uma imagem, link, ou só texto mesmo.</p>
-              </div>
-            
-              <div class="post-interacoes">
-                <div class="post-votos">
-                  <button class="post-interacoes-button"><img src="images/upvote.svg" alt="▲" class="svg"></button>
-                  <span>1234</span>
-                  <button class="post-interacoes-button"><img src="images/downvote.svg" alt="▼" class="svg"></button>
-                </div>
-                  <button class="post-interacoes-button">
-                      <img src="images/comments.svg" alt="Comentários" class="svg">
-                      <span>234 Comentários</span>
-                  </button>
-                  <button class="post-interacoes-button">
-                      <img src="images/award.svg" alt="Premios" class="svg">
-                      <span>3 Prêmios</span>
-                  </button>
-                  <button class="post-interacoes-button">
-                      <img src="images/share.svg" alt="Compartilhar" width="24">
-                      <span>Compartilhar</span>
-                  </button>
-              </div>
-            </div>
-
-            <div class="post">
-              <div class="post-top">
-                <div class="post-comunidade-info">
-                  <img src="images/circle.svg" alt="Comunidade" class="post-comunidade-foto">
-                  <div class="post-comunidade-detalhes">
-                    <span class="post-comunidade-nome">r/Exemplo</span>
-                    <span class="post-tempo">• há 5 horas</span>
-                  </div>
-                </div>
-                <div class="post-acoes">
-                  <button class="botao-unir-se-post">Unir-se</button>
-                  <button class="botao-mais-post">
-                    <img src="images/more.svg" alt="Mais opções" class="svg">
-                  </button>
-                </div>
-              </div>
-            
-              <div class="post-conteudo">
-                <h2 class="post-titulo">Título do post</h2>
-                <p>Conteúdo principal do post. Pode ser uma imagem, link, ou só texto mesmo.</p>
-              </div>
-            
-              <div class="post-interacoes">
-                <div class="post-votos">
-                  <button class="post-interacoes-button"><img src="images/upvote.svg" alt="▲" class="svg"></button>
-                  <span>1234</span>
-                  <button class="post-interacoes-button"><img src="images/downvote.svg" alt="▼" class="svg"></button>
-                </div>
-                  <button class="post-interacoes-button">
-                      <img src="images/comments.svg" alt="Comentários" class="svg">
-                      <span>234 Comentários</span>
-                  </button>
-                  <button class="post-interacoes-button">
-                      <img src="images/award.svg" alt="Premios" class="svg">
-                      <span>3 Prêmios</span>
-                  </button>
-                  <button class="post-interacoes-button">
-                      <img src="images/share.svg" alt="Compartilhar" width="24">
-                      <span>Compartilhar</span>
-                  </button>
-              </div>
-            </div>
-
-            <div class="post">
-              <div class="post-top">
-                <div class="post-comunidade-info">
-                  <img src="images/circle.svg" alt="Comunidade" class="post-comunidade-foto">
-                  <div class="post-comunidade-detalhes">
-                    <span class="post-comunidade-nome">r/Exemplo</span>
-                    <span class="post-tempo">• há 5 horas</span>
-                  </div>
-                </div>
-                <div class="post-acoes">
-                  <button class="botao-unir-se-post">Unir-se</button>
-                  <button class="botao-mais-post">
-                    <img src="images/more.svg" alt="Mais opções" class="svg">
-                  </button>
-                </div>
-              </div>
-            
-              <div class="post-conteudo">
-                <h2 class="post-titulo">Título do post</h2>
-                <p>Conteúdo principal do post. Pode ser uma imagem, link, ou só texto mesmo.</p>
-              </div>
-            
-              <div class="post-interacoes">
-                <div class="post-votos">
-                  <button class="post-interacoes-button"><img src="images/upvote.svg" alt="▲" class="svg"></button>
-                  <span>1234</span>
-                  <button class="post-interacoes-button"><img src="images/downvote.svg" alt="▼" class="svg"></button>
-                </div>
-                  <button class="post-interacoes-button">
-                      <img src="images/comments.svg" alt="Comentários" class="svg">
-                      <span>234 Comentários</span>
-                  </button>
-                  <button class="post-interacoes-button">
-                      <img src="images/award.svg" alt="Premios" class="svg">
-                      <span>3 Prêmios</span>
-                  </button>
-                  <button class="post-interacoes-button">
-                      <img src="images/share.svg" alt="Compartilhar" width="24">
-                      <span>Compartilhar</span>
-                  </button>
-              </div>
-            </div>
-
-            <div class="post">
-              <div class="post-top">
-                <div class="post-comunidade-info">
-                  <img src="images/circle.svg" alt="Comunidade" class="post-comunidade-foto">
-                  <div class="post-comunidade-detalhes">
-                    <span class="post-comunidade-nome">r/Exemplo</span>
-                    <span class="post-tempo">• há 5 horas</span>
-                  </div>
-                </div>
-                <div class="post-acoes">
-                  <button class="botao-unir-se-post">Unir-se</button>
-                  <button class="botao-mais-post">
-                    <img src="images/more.svg" alt="Mais opções" class="svg">
-                  </button>
-                </div>
-              </div>
-            
-              <div class="post-conteudo">
-                <h2 class="post-titulo">Título do post</h2>
-                <p>Conteúdo principal do post. Pode ser uma imagem, link, ou só texto mesmo.</p>
-              </div>
-            
-              <div class="post-interacoes">
-                <div class="post-votos">
-                  <button class="post-interacoes-button"><img src="images/upvote.svg" alt="▲" class="svg"></button>
-                  <span>1234</span>
-                  <button class="post-interacoes-button"><img src="images/downvote.svg" alt="▼" class="svg"></button>
-                </div>
-                  <button class="post-interacoes-button">
-                      <img src="images/comments.svg" alt="Comentários" class="svg">
-                      <span>234 Comentários</span>
-                  </button>
-                  <button class="post-interacoes-button">
-                      <img src="images/award.svg" alt="Premios" class="svg">
-                      <span>3 Prêmios</span>
-                  </button>
-                  <button class="post-interacoes-button">
-                      <img src="images/share.svg" alt="Compartilhar" width="24">
-                      <span>Compartilhar</span>
-                  </button>
-              </div>
-            </div>
       </main>
       <aside class="sidebar-comunidades-populares">
         <div class="conteudo-scrollavel-sidebar-direita">
