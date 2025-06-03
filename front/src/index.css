@@ -1,0 +1,33 @@
+:root {
+--cor-primaria: #0079d3;
+--cor-secundaria: #ff4500;
+
+--fundo-principal: #1a1a1b;
+--fundo-card: #272729;
+--fundo-hover: #3a3b3c;
+
+--texto-principal: #d7dadc;
+--texto-secundario: #818384;
+
+--borda-cor: #343536;
+--borda-cor-2: #444;
+--sombra-leve: rgba(255, 255, 255, 0.05);
+
+--branco: #ffffff;
+--preto: #000000;
+--preto-2: #282828;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--fundo-principal);
+  color: var(--texto-principal);
+  line-height: 1.6;
+}

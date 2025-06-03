@@ -1,0 +1,84 @@
+.header{
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--borda-cor);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-search-bar{
+    display: flex;
+    align-items: center;
+    background-color: var(--fundo-hover);
+    border-radius: 999px;
+    padding: 12px 24px;
+    gap: 8px;
+}
+
+.header-search-container{
+    display: flex;
+    align-items: center;
+}
+
+.header-search-container input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--texto-principal);
+    width: 300px;
+}
+
+.header-search-bar input::placeholder{
+    color: var(--text-secundario);
+}
+
+.header-buttons{
+    display: flex;
+}
+
+.header-buttons img{
+    width: 24px;
+    height: 24px;
+}
+
+.header-button{
+    background-color: var(--fundo-principal);
+    color: var(--branco);
+    border: none;
+    padding: 8px 16px;
+    margin-left: 8px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.header-button:hover{
+    background-color: var(--fundo-hover);
+}
+
+#singin-button{
+    background-color: var(--cor-secundaria);
+}
+
+#singup-button{
+    background-color: var(--cor-primaria);
+}
+
+#download-button{
+    background-color: var(--fundo-hover);
+}
+
+#reddit-logo-header, #search-button{
+    cursor: pointer;
+}
