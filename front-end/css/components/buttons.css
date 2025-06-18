@@ -1,0 +1,228 @@
+    .navbar-button{
+        height: 100%;
+        background-color: var(--fundo-principal);
+        color: var(--branco);
+        border: none;
+        padding: 8px 16px;
+        margin-left: 8px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;          /* Adiciona flexbox no botão */
+        align-items: center;    /* Centraliza imagem e texto verticalmente */
+        gap: 8px;               /* Espaço entre a imagem e o texto */
+    }
+
+    .navbar-button:hover {
+    background-color: var(--fundo-hover);
+    }
+
+    #singin-button{
+        background-color: var(--cor-secundaria);
+    }
+
+    #reddit-logo-navbar, #search-button{
+        cursor: pointer;
+    }
+
+    .botao-unir-se-post {
+        background-color: var(--cor-primaria);
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    
+    .botao-unir-se-post:hover {
+        background-color: #005999; /* um tom mais escuro */
+    }
+    
+    .botao-mais-post {
+        border: none;
+        height: 100%;
+        background-color: var(--fundo-principal);
+        color: var(--branco);
+        padding: 6px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;          /* Adiciona flexbox no botão */
+        align-items: center;    /* Centraliza imagem e texto verticalmente */
+    }
+
+    .botao-mais-post:hover{
+        background-color: var(--fundo-hover);
+    }
+
+    .post-interacoes-button{
+        height: 100%;
+        background-color: var(--borda-cor);
+        color: var(--branco);
+        border: none;
+        padding: 4px 8px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;          /* Adiciona flexbox no botão */
+        align-items: center;    /* Centraliza imagem e texto verticalmente */
+        gap: 8px;               /* Espaço entre a imagem e o texto */
+    }
+
+    .post-interacoes-button:hover{
+        background-color: var(--fundo-hover);
+    }
+
+    .post-interacoes-button span{
+        color: var(--texto-principal);
+    }
+
+    .sidebar-esquerda-button {
+        background-color: var(--fundo-principal);
+        color: var(--texto-principal);
+        border: none;
+        padding: 10px;
+        width: 85%;
+        text-align: left;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+    }
+
+    .dropdown-sidebar-esquerda-button { /*TIRAR ISSO*/
+        background-color: var(--fundo-principal);
+        color: var(--texto-principal);
+        border: none;
+        padding: 10px;
+        width: 85%;
+        text-align: left;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }   
+    
+    .dropdown-sidebar-esquerda-button:hover{
+        background-color: var(--fundo-hover);        
+    }
+
+    .sidebar-esquerda-button:hover {
+        background-color: var(--fundo-hover);
+    }
+
+    .sidebar-direita-button {
+        background-color: var(--preto);
+        color: var(--branco);
+        border: none;
+        padding: 8px 4px;
+        width: 30%;
+        margin-top: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+  
+    .sidebar-direita-button:hover {
+        background-color: var(--borda-cor);
+    }
+
+    /* .menu-sanduiche{
+        background-color: var(--fundo-principal);
+        position: fixed;
+        top: 94px;
+        left: 200px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid var(--borda-cor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    } */
+
+.menu-sanduiche {
+        position: absolute;
+        top: 100px;
+        left: 90%;
+        /* transform: translateX(50%); */
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--fundo-principal);
+        border: 1px solid var(--borda-cor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+
+
+    .menu-sanduiche:hover{
+        background-color: var(--fundo-hover);
+    }
+
+    #sair-do-download-button{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        border: 1px solid var(--borda-cor);
+        background-color: var(--fundo-principal);
+        display: flex;
+    }
+
+    #sair-do-download-button:hover{
+        background-color: var(--fundo-hover);
+    }
+
+    .dropdown-content{
+        display: block;
+    }
+
+    .dropdown-subcontent{
+        display: none;
+    }
+
+    .subassunto-sidebar-esquerda-button{
+        background-color: var(--fundo-principal);
+        color: var(--texto-principal);
+        border: none;
+        /* padding-left: 20px;
+        padding-bottom: 10px; */
+        padding: 10px 0px 10px 10px;
+        margin-left: 15px;
+        width: 85%;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        align-items: center;  
+        border-left: 1px solid var(--borda-cor);
+        width: 76%; /*Esse tamanho está bom*/
+        height: auto;
+    }
+
+    .subassunto-sidebar-esquerda-button:hover{
+        background-color: var(--fundo-hover);        
+    }
+
+    .ver-mais-sidebar-esquerda{
+        padding: 6px 8px;
+        margin-left: 3px;
+        border-radius: 9999px;
+        border: none;
+        background-color: var(--fundo-principal);
+        color: var(--texto-principal);
+    }
+
+    .ver-mais-sidebar-esquerda:hover{
+        background-color: var(--fundo-hover);
+    }
+    

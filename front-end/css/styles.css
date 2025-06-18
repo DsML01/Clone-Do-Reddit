@@ -1,0 +1,78 @@
+@import url('components/buttons.css');
+@import url('components/feed.css');
+@import url('components/navbar.css');
+@import url('components/post.css');
+@import url('components/sidebar-direita.css');
+@import url('components/sidebar-esquerda.css');
+@import url('components/janelas.css');
+@import url('components/chat.css');
+   
+:root {
+--cor-primaria: #0079d3;
+--cor-secundaria: #ff4500;
+
+--fundo-principal: #1a1a1b;
+--fundo-card: #272729;
+--fundo-hover: #3a3b3c;
+
+--texto-principal: #d7dadc;
+--texto-secundario: #818384;
+
+--borda-cor: #343536;
+--borda-cor-2: #444;
+--sombra-leve: rgba(255, 255, 255, 0.05);
+
+--branco: #ffffff;
+--preto: #000000;
+--preto-2: #282828;
+}
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--fundo-principal);
+  color: var(--texto-principal);
+  line-height: 1.6;
+}
+
+.svg{
+  height: 24px;
+  width: 24px;
+}
+
+  #sidebar{
+    margin-left: 0px;
+    padding-left: 0;
+  }
+
+  #baixar-app{
+    background-color: var(--fundo-card);
+  }
+  
+  .main-container {
+    display: flex;
+    padding: 0 100px 0 20px;
+    gap: 20px;
+    margin-left: 200px;
+    padding-top: 84px;
+  }
+  
+  /* .sidebar-esquerda {
+    position: relative;
+    width: 200px;
+    height: 100vh; Deixa o tamanho da sidebar até o fim da tela
+    background-color: var(--fundo-principal);
+    height: 100vh;
+    border-right: 1px solid var(--borda-cor);
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  } */
+  
+
+  

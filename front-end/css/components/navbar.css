@@ -1,0 +1,65 @@
+    /* Navbar antes */
+    /* .navbar { 
+    background-color: var(--fundo-principal);
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--borda-cor);
+    position: relative;
+    } */
+
+    /* Navbar GPT */
+    .navbar {
+        background-color: var(--fundo-principal);
+        padding: 10px 20px;
+        border-bottom: 1px solid var(--borda-cor);
+        position: fixed;       /* FIXA no topo da tela */
+        top: 0;
+        left: 0;
+        width: 100%;           /* Garante que ocupe a largura total */
+        z-index: 1000;         /* Fica sobre o conteúdo */
+    }
+
+
+    .navbar-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-logo img {
+        width: 100px;
+    }
+
+    .navbar-search-bar{
+        display: flex;
+        align-items: center;
+        background-color: var(--fundo-hover);
+        border-radius: 999px;
+        padding: 12px 24px;
+        gap: 8px;
+    }
+
+    .navbar-search-container{
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-search-bar input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: var(--texto-principal);
+        width: 300px;
+    }
+
+    .navbar-buttons{
+       display: flex;
+    }
+
+    .navbar-search-bar input::placeholder {
+      color: var(--texto-secundario);
+    }
+
+    .navbar-traducao img {
+        width: 24px;
+        height: 24px;
+    }
